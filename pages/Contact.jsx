@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box, Typography, Grid, Container } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import backgroundImage from '/pictures/images.jpeg';
 
-function GalleryPage() {
+function Contact() {
   return (
     <>
       {/* Header-Bild */}
@@ -27,14 +27,14 @@ function GalleryPage() {
             borderRadius: 2,
           }}
         >
-          About
+          Galerie
         </Typography>
       </Box>
 
-      {/* Neuer Inhalt, zentriert */}
-      <Container maxWidth="lg" sx={{ py: 6 }}>
+      {/* Neuer Inhalt (statt Videos) */}
+      <Box sx={{ px: 4, py: 6 }}>
         {/* Erster Abschnitt: Bild links, Text rechts */}
-        <Grid container spacing={4} justifyContent="center" mb={4}>
+        <Grid container spacing={0} mb={4}>
           <Grid item xs={12} md={6}>
             <Box
               sx={{
@@ -50,7 +50,7 @@ function GalleryPage() {
             >
               <Box
                 component="img"
-                src="pictures/images.jpeg"
+                src="/images/image1.jpg"
                 alt="Bild 1"
                 sx={{
                   width: '100%',
@@ -85,7 +85,7 @@ function GalleryPage() {
         </Grid>
 
         {/* Zweiter Abschnitt: Text links, Bild rechts */}
-        <Grid container spacing={4} justifyContent="center">
+        <Grid container spacing={0}>
           <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
             <Box
               sx={{
@@ -123,7 +123,7 @@ function GalleryPage() {
             >
               <Box
                 component="img"
-                src="/pictures/images.jpeg"
+                src="/images/image2.jpg"
                 alt="Bild 2"
                 sx={{
                   width: '100%',
@@ -134,9 +134,9 @@ function GalleryPage() {
             </Box>
           </Grid>
         </Grid>
-      </Container>
+      </Box>
     </>
   );
 }
 
-export default GalleryPage;
+export default Contact;

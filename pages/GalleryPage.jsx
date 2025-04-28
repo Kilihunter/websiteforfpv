@@ -33,7 +33,7 @@ function GalleryPage() {
       {/* Header-Bild */}
       <Box
         sx={{
-          height: '50vh',
+          height: '30vh',
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',

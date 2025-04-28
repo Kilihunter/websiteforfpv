@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Navbar from './modules/navbar';
 import GalleryPage from './pages/GalleryPage';
+import Contact from './pages/Contact'
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useMemo } from 'react';
@@ -58,6 +59,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
     </ThemeProvider>
