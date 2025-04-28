@@ -36,29 +36,6 @@ function GalleryPage() {
         {/* Erster Abschnitt: Bild links, Text rechts */}
         <Grid container spacing={4} justifyContent="center" mb={4}>
           <Grid item xs={12} md={6}>
-            <Box
-              sx={{
-                width: '100%',
-                height: { xs: 300, md: 400 },
-                overflow: 'hidden',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: '#f5f5f5',
-                borderRadius: 2,
-              }}
-            >
-              <Box
-                component="img"
-                src="pictures/images.jpeg"
-                alt="Bild 1"
-                sx={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                }}
-              />
-            </Box>
           </Grid>
           <Grid item xs={12} md={6}>
             <Box
@@ -74,12 +51,21 @@ function GalleryPage() {
                 borderRadius: 2,
               }}
             >
-              <Typography variant="h4" gutterBottom>
-                Überschrift 1
-              </Typography>
-              <Typography variant="body1">
-                Hier dein Textblock für den ersten Bereich.
-              </Typography>
+             <Typography variant="h3" gutterBottom>
+        Hi, wir sind das FPVision-Team!
+        
+        </Typography>
+        <Typography variant="body1">
+        Seit mehreren Monaten sind wir mit voller Begeisterung in der Welt der FPV-Drohnen unterwegs.
+
+FPV steht für First Person View – das bedeutet, wir fliegen unsere Drohnen mit einer speziellen Videobrille und sehen dabei in Echtzeit genau das, was die Drohne sieht. So wird jeder Flug zu einem immersiven Erlebnis – und das sieht man auch in unseren Aufnahmen.
+
+Durch diese Technik können wir extrem präzise manövrieren – durch enge Räume, unter Hindernissen hindurch oder mitten durch spannende Locations.
+Im Gegensatz zu klassischen Kameradrohnen, wie etwa von DJI, sind unsere FPV-Drohnen auf Geschwindigkeit, Agilität und kreative Freiheit ausgelegt.
+
+Ob für actionreiche Werbevideos, besondere Eventaufnahmen oder spektakuläre Luftbilder für Social Media – wir zeigen Perspektiven, die im Kopf bleiben.
+Unser Ziel: Aufnahmen, die Emotionen wecken und in Erinnerung bleiben.
+        </Typography>
             </Box>
           </Grid>
         </Grid>
