@@ -19,7 +19,7 @@ export default function HeroSection() {
           zIndex: 1,
         }}
       >
-        <source src="/videos/DJI_0237.MP4" type="video/mp4" />
+        <source src="/videos/ThePfalzv1.mp4" type="video/mp4" />
         Dein Browser unterstützt kein Video.
       </video>
 

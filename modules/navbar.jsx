@@ -43,7 +43,7 @@ function Navbar() {
               transition: '0.3s ease-in-out'
             }}
           >
-            FPV-Drones
+          AeroLens Aerials
           </Typography>
           <Button
             component={Link}
