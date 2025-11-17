@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Box, Toolbar, Typography, Button } from '@mui/material';
 
-// Die Navigations-Links (werden hier gebraucht)
+// 1. Google Font importieren
+import "@fontsource/pacifico";
+
+// Die Navigations-Links (bleiben gleich)
 const navItems = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
@@ -12,7 +15,7 @@ const navItems = [
 ];
 
 function DesktopNavbar() {
-  const [hovered, setHovered] =useState(false);
+  const [hovered, setHovered] = useState(false);
 
   return (
     <Box
@@ -39,17 +42,41 @@ function DesktopNavbar() {
         }}
       >
         <Toolbar>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              color: hovered ? 'white' : 'black',
-              transition: '0.3s ease-in-out',
-            }}
-          >
-            AeroLens Aerials
-          </Typography>
+          
+          {/* --- ANPASSUNG START --- */}
+          {/* 2. Box für Logo + Titel */}
+          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, overflow: 'visible' }}>
+            <img
+              src="/pictures/logo.png" // 3. Dein Logo
+              alt="FPV-Flow Logo"
+              style={{ 
+                height: '36px', // Etwas größer für Desktop
+                width: '36px',  // Quadratisch machen
+                objectFit: 'contain', 
+                cursor: 'pointer', 
+                marginRight: '12px' 
+              }}
+            />
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{
+                color: hovered ? 'white' : 'black', // 4. Hover-Effekt
+                fontFamily: 'Pacifico, cursive', // 5. Deine Schriftart
+                fontWeight: 400,
+                letterSpacing: 1,
+                transition: '0.3s ease-in-out',
+                userSelect: 'none',
+                fontSize: { xs: '1.3rem', md: '1.7rem' }, // Responsive Größe
+                whiteSpace: 'nowrap',
+                lineHeight: 1.6, // 6. Verhindert Abschneiden
+                overflow: 'visible',
+              }}
+            >
+              FPV-Flow by Sturm {/* 7. Dein Name */}
+            </Typography>
+          </Box>
+          {/* --- ANPASSUNG ENDE --- */}
           
           {/* Nur die Desktop-Buttons */}
           <Box>

@@ -4,6 +4,7 @@ import About from './pages/About';
 import Navbar from './modules/navbar';
 import GalleryPage from './pages/GalleryPage';
 import Contact from './pages/Contact'
+import LegalFooter from './modules/LegalFooter';
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useMemo } from 'react';
@@ -68,6 +69,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
+    <LegalFooter />
     </ThemeProvider>
   );
   

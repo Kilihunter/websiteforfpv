@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import backgroundImage from '/pictures/DSC04197.jpg'; // dein Bild hier
+import backgroundImage from '/pictures/DSC04197_littlecropped.jpg'; // dein Bild hier
 
 export default function HeroSection() {
   return (
@@ -11,14 +11,15 @@ export default function HeroSection() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       {/* Overlay-Box mit Text */}
       <Box
         sx={{
           position: 'absolute',
-          top: '50%',
-          left: '5%',
           transform: 'translateY(-50%)',
           backgroundColor: 'rgba(0, 0, 0, 0.7)', // schwarz mit Transparenz
           color: 'white',
@@ -34,6 +35,9 @@ export default function HeroSection() {
         </Typography>
         <Typography variant="body1">
        E-Mail: its.kili.fpv@gmail.com
+        </Typography>
+        <Typography variant="body1">
+          Instergram: its_kili_fpv
         </Typography>
       </Box>
     </Box>

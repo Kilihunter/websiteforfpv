@@ -16,6 +16,9 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
+// 1. Google Font importieren
+import "@fontsource/pacifico";
+
 const navItems = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
@@ -23,21 +26,15 @@ const navItems = [
   { label: 'Contact', path: '/contact' },
 ];
 
-// === HIER IST DIE KORREKTUR ===
-// Öffnen (Enter)
-const APPBAR_ENTER_DURATION = 0;     // 0ms (sofort eckig) - Das war KORREKT
-const COLLAPSE_ENTER_DURATION = 225; // Das Menü klappt normal auf
-const FADE_ENTER_DELAY = 75;         // Verzögerung pro Menüpunkt
+// ... (Deine Animations-Konstanten) ...
+const APPBAR_ENTER_DURATION = 0;
+const COLLAPSE_ENTER_DURATION = 225;
+const FADE_ENTER_DELAY = 75;
+const COLLAPSE_EXIT_DURATION = 400;
+const APPBAR_EXIT_DURATION = 150;
+const FADE_EXIT_DURATION = 250;
+const APPBAR_EXIT_DELAY = COLLAPSE_EXIT_DURATION - APPBAR_EXIT_DURATION;
 
-// Schließen (Exit)
-const COLLAPSE_EXIT_DURATION = 400;  // Das Menü fährt langsam ein (MASTER-DAUER)
-const APPBAR_EXIT_DURATION = 150;    // Die Ecken-Animation selbst dauert 150ms
-const FADE_EXIT_DURATION = 250;      // Die Schrift verschwindet
-
-// DIE LÖSUNG: Berechnete Verzögerung für die AppBar
-const APPBAR_EXIT_DELAY = COLLAPSE_EXIT_DURATION - APPBAR_EXIT_DURATION; // 400 - 150 = 250ms
-
-// === ENDE DER KORREKTUR ===
 
 function MobileNavbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -79,32 +76,56 @@ function MobileNavbar() {
             boxShadow: 'none',
             borderRadius: isMenuOpen ? '15px 15px 0 0' : '15px',
             
-            // Die Transition nutzt jetzt den berechneten DELAY
             transition: (theme) =>
               theme.transitions.create('border-radius', {
                 duration: isMenuOpen
-                  ? APPBAR_ENTER_DURATION  // 0ms
-                  : APPBAR_EXIT_DURATION,  // 150ms
+                  ? APPBAR_ENTER_DURATION
+                  : APPBAR_EXIT_DURATION,
                 easing: isMenuOpen
                   ? theme.transitions.easing.sharp
                   : theme.transitions.easing.easeOut,
-                
-                // HIER IST DIE ÄNDERUNG:
                 delay: isMenuOpen
-                  ? 0                     // 0ms Verzögerung beim Öffnen
-                  : APPBAR_EXIT_DELAY,  // 250ms Verzögerung beim Schließen
+                  ? 0
+                  : APPBAR_EXIT_DELAY,
               }),
           }}
         >
-          {/* ... Rest der AppBar ... */}
           <Toolbar>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, color: 'white' }}
-            >
-              AeroLens Aerials
-            </Typography>
+            {/* Wrapper für Logo + Text, verhindert Überlaufen */}
+            <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, overflow: 'visible' }}>
+              <img
+                src="/pictures/logo.png"
+                alt="FPV-Flow Logo"
+                style={{ 
+                  height: '30px', 
+                  width: '30px', // Stellt sicher, dass es quadratisch ist
+                  objectFit: 'contain', 
+                  cursor: 'pointer', 
+                  marginRight: '10px' 
+                }}
+              />
+              {/* Hier ist die geänderte Typography */}
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{
+                  color: 'white',
+                  fontFamily: 'Pacifico, cursive',
+                  fontWeight: 400,
+                  letterSpacing: 1,
+                  userSelect: 'none',
+                  fontSize: '1.3rem',
+                  whiteSpace: 'nowrap',
+                  
+                  // --- KORREKTUR ---
+                  lineHeight: 1.6, // Mehr Platz für die Schrift
+                  overflow: 'visible', // Verhindert Abschneiden
+                }}
+              >
+                FPV-Flow by Sturm
+              </Typography>
+            </Box>
+
             <IconButton
               color="inherit"
               aria-label="open menu"
@@ -121,12 +142,12 @@ function MobileNavbar() {
           </Toolbar>
         </AppBar>
 
-        {/* Das Menü, das ausklappt */}
+        {/* Das Menü, das ausklappt (bleibt alles gleich) */}
         <Collapse
           in={isMenuOpen}
           timeout={{
-            enter: COLLAPSE_ENTER_DURATION, // 225ms
-            exit: COLLAPSE_EXIT_DURATION,   // 400ms
+            enter: COLLAPSE_ENTER_DURATION,
+            exit: COLLAPSE_EXIT_DURATION,
           }}
           unmountOnExit
         >
