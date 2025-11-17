@@ -44,7 +44,7 @@ export default function HeroSection() {
         <Typography variant="h5" gutterBottom>
         Entdecke die Freiheit neuer Perspektiven
         </Typography>
-        <Button component={Link} to="/contact" color="primary">
+        <Button component={Link} to="/contact" color='success' sx={{backgroundColor:'transparent'}} >
           Film Buchen
         </Button>
       </Box>

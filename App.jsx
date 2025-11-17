@@ -19,33 +19,39 @@ function App() {
         mode: prefersDarkMode ? 'dark' : 'light',
         ...(prefersDarkMode
           ? {
-              // 🌙 Dark Mode Farben
-              background: {
-                default: '#121212',
-                paper: '#1e1e1e',
-              },
-              primary: {
-                main: '#90caf9',
-              },
-              text: {
-                primary: '#ffffff',
-                secondary: '#bbbbbb',
-              },
-            }
-          : {
-              // ☀️ Light Mode Farben
-              background: {
-                default: '#ffffff',
-                paper: '#f5f5f5',
-              },
-              primary: {
-                main: '#1976d2',
-              },
-              text: {
-                primary: '#000000',
-                secondary: '#333333',
-              },
-            }),
+        // 🌙 Dark Mode (Angepasst von deinem Vorschlag)
+        background: {
+          default: '#121212', // Dein sehr dunkles Grau
+          paper: 'rgb(36, 34, 34)', // Dein Navbar-Dunkel (oder '#1e1e1e')
+        },
+        primary: {
+          main: '#90caf9', // Dein helles Blau
+        },
+        secondary: {
+          main: '#DDAA77', // Ein helles, "sandiges" Orange für Akzente
+        },
+        text: {
+          primary: '#F0F0F0', // Ein leicht gedämpftes Weiß (angenehmer als #fff)
+          secondary: '#bbbbbb', // Dein Hellgrau
+        },
+      }
+    :  {
+        // ☀️ Light Mode ("Sand"-Thema)
+        background: {
+          default: '#EAE0D5', // Ein "dunkler" Sand-Hintergrund
+          paper: '#FCF8F3',     // Ein hellerer "Pergament"-Ton für die Navbar/Karten
+        },
+        primary: {
+          main: '#3D5A80', // Ein gedämpftes "Denim"-Blau als Akzent
+        },
+        secondary: {
+          main: '#A0522D', // Ein "Rost"- oder "Terrakotta"-Ton
+        },
+        text: {
+          primary: '#3B3121', // Ein sehr dunkles Braun (statt Schwarz)
+          secondary: '#7A6C5D', // Ein helleres Braun/Grau
+        },
+      }),
       },
     }),
   [prefersDarkMode],

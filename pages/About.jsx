@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
-import backgroundImage from '/pictures/images.jpeg';
+import backgroundImage from '/pictures/DSC04197_croped.jpg';
 
 function GalleryPage() {
   return (
@@ -22,8 +22,6 @@ function GalleryPage() {
           sx={{
             color: '#fff',
             backgroundColor: 'rgba(0,0,0,0.5)',
-            px: 3,
-            py: 1,
             borderRadius: 2,
           }}
         >
@@ -36,12 +34,9 @@ function GalleryPage() {
         {/* Erster Abschnitt: Bild links, Text rechts */}
         <Grid container spacing={4} justifyContent="center" mb={4}>
           <Grid item xs={12} md={6}>
-          </Grid>
-          <Grid item xs={12} md={6}>
             <Box
               sx={{
                 width: '100%',
-                height: { xs: 300, md: 400 },
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -52,56 +47,52 @@ function GalleryPage() {
               }}
             >
              <Typography variant="h3" gutterBottom>
-        Hi, wir sind das FPVision-Team!
+        Hi, ich bin Kilian von FPVision!
         
         </Typography>
         <Typography variant="body1">
-        Seit mehreren Monaten sind wir mit voller Begeisterung in der Welt der FPV-Drohnen unterwegs.
+        "Seit mehreren Monaten bin ich mit voller Begeisterung in der Welt der FPV-Drohnen unterwegs. FPV steht für First Person View – das bedeutet, ich fliege meine Drohnen mit einer speziellen Videobrille und sehe dabei in Echtzeit genau das, was die Drohne sieht. So wird jeder Flug zu einem immersiven Erlebnis – und das sieht man auch in meinen Aufnahmen.
 
-FPV steht für First Person View – das bedeutet, wir fliegen unsere Drohnen mit einer speziellen Videobrille und sehen dabei in Echtzeit genau das, was die Drohne sieht. So wird jeder Flug zu einem immersiven Erlebnis – und das sieht man auch in unseren Aufnahmen.
+Durch diese Technik kann ich extrem präzise manövrieren – durch enge Räume, unter Hindernissen hindurch oder mitten durch spannende Locations. Im Gegensatz zu klassischen Kameradrohnen sind meine FPV-Drohnen auf Geschwindigkeit, Agilität und kreative Freiheit ausgelegt.
 
-Durch diese Technik können wir extrem präzise manövrieren – durch enge Räume, unter Hindernissen hindurch oder mitten durch spannende Locations.
-Im Gegensatz zu klassischen Kameradrohnen, wie etwa von DJI, sind unsere FPV-Drohnen auf Geschwindigkeit, Agilität und kreative Freiheit ausgelegt.
-
-Ob für actionreiche Werbevideos, besondere Eventaufnahmen oder spektakuläre Luftbilder für Social Media – wir zeigen Perspektiven, die im Kopf bleiben.
-Unser Ziel: Aufnahmen, die Emotionen wecken und in Erinnerung bleiben.
+Ob für actionreiche Werbevideos, besondere Eventaufnahmen oder spektakuläre Luftbilder für Social Media – ich zeige Perspektiven, die im Kopf bleiben. Mein Ziel: Aufnahmen, die Emotionen wecken und in Erinnerung bleiben."
         </Typography>
             </Box>
           </Grid>
         </Grid>
 
         {/* Zweiter Abschnitt: Text links, Bild rechts */}
-        <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
+        <Grid container spacing={2} justifyContent="center">
+          <Grid size={8}>
             <Box
               sx={{
                 width: '100%',
-                height: { xs: 300, md: 400 },
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                alignItems: 'center',
+                alignItems: 'left',
                 textAlign: 'center',
                 p: 4,
                 borderRadius: 2,
               }}
             >
               <Typography variant="h4" gutterBottom>
-                Überschrift 2
+                Wer steckt dahinter?
               </Typography>
               <Typography variant="body1">
-                Und hier dein Textblock für den zweiten Bereich.
+                Ich bin Kilian, der Kopf, Pilot und kreative Motor hinter FPVision. Im Bild siehst du mich gerade bei der Vorbereitung einer meiner speziell angefertigten FPV-Drohnen.
+
+Als dein direkter Ansprechpartner – vom ersten Konzept bis zur finalen Aufnahme – verbinde ich technisches Flugkönnen mit einem filmischen Auge. Mein Anspruch ist es, deine Vision ohne Umwege in packende Bilder zu verwandeln.
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
+          <Grid size={4}>
             <Box
               sx={{
                 width: '100%',
-                height: { xs: 300, md: 400 },
                 overflow: 'hidden',
                 display: 'flex',
-                alignItems: 'center',
+                alignItems: 'right',
                 justifyContent: 'center',
                 backgroundColor: '#f5f5f5',
                 borderRadius: 2,
@@ -109,7 +100,7 @@ Unser Ziel: Aufnahmen, die Emotionen wecken und in Erinnerung bleiben.
             >
               <Box
                 component="img"
-                src="/pictures/images.jpeg"
+                src="/pictures/DSC04175.jpg"
                 alt="Bild 2"
                 sx={{
                   width: '100%',

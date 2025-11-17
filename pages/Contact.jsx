@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import backgroundImage from '/pictures/images.jpeg'; // dein Bild hier
+import backgroundImage from '/pictures/DSC04197.jpg'; // dein Bild hier
 
 export default function HeroSection() {
   return (
@@ -33,7 +33,7 @@ export default function HeroSection() {
         
         </Typography>
         <Typography variant="body1">
-       
+       E-Mail: its.kili.fpv@gmail.com
         </Typography>
       </Box>
     </Box>

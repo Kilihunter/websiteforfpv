@@ -7,7 +7,8 @@ import {
   IconButton,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import backgroundImage from '/pictures/images.jpeg';
+import backgroundImage from '/pictures/DSC04197_croped.jpg';
+
 
 const videoList = [
   { src: '/videos/DJI_0237.MP4', title: 'Mountain Fly' },
@@ -47,12 +48,10 @@ function GalleryPage() {
           sx={{
             color: '#fff',
             backgroundColor: 'rgba(0,0,0,0.5)',
-            px: 3,
-            py: 1,
             borderRadius: 2,
           }}
         >
-          Galerie
+          Gallery
         </Typography>
       </Box>
 
