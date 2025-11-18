@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, rgbToHex } from '@mui/material';
 import { Link } from 'react-router-dom';
 export default function HeroSection() {
   return (
@@ -19,7 +19,7 @@ export default function HeroSection() {
           zIndex: 1,
         }}
       >
-        <source src="/videos/ThePfalzv1.mp4" type="video/mp4" />
+        <source src="/websiteforfpv/videos/ThePfalzv1.mp4" type="video/mp4" />
         Dein Browser unterstützt kein Video.
       </video>
 
@@ -35,9 +35,16 @@ export default function HeroSection() {
           height: '100%',
           color: 'white',
           textAlign: 'center',
-          px: 2,
         }}
       >
+        <Box sx={{
+          backgroundColor: 'rgba(49, 48, 48, 0.5)',
+          px: 3,
+          py: 3,
+          borderRadius: 2
+
+
+        }}>
         <Typography variant="h2" component="h1" gutterBottom>
           Willkommen!
         </Typography>
@@ -47,6 +54,7 @@ export default function HeroSection() {
         <Button component={Link} to="/contact" color='success' sx={{backgroundColor:'transparent'}} >
           Film Buchen
         </Button>
+        </Box>
       </Box>
     </Box>
   );

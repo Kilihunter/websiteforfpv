@@ -100,7 +100,7 @@ Als dein direkter Ansprechpartner – vom ersten Konzept bis zur finalen Aufnahm
             >
               <Box
                 component="img"
-                src="/pictures/DSC04175.jpg"
+                src="/websiteforfpv/pictures/DSC04175.jpg"
                 alt="Bild 2"
                 sx={{
                   width: '100%',

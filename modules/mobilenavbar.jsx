@@ -15,6 +15,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import logo from '/pictures/logo.png';
 
 // 1. Google Font importieren
 import "@fontsource/pacifico";
@@ -94,7 +95,7 @@ function MobileNavbar() {
             {/* Wrapper für Logo + Text, verhindert Überlaufen */}
             <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, overflow: 'visible' }}>
               <img
-                src="/pictures/logo.png"
+                src="/websiteforfpv/pictures/logo.png"
                 alt="FPV-Flow Logo"
                 style={{ 
                   height: '30px', 

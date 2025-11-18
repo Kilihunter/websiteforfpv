@@ -47,7 +47,7 @@ function DesktopNavbar() {
           {/* 2. Box für Logo + Titel */}
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, overflow: 'visible' }}>
             <img
-              src="/pictures/logo.png" // 3. Dein Logo
+              src="/websiteforfpv/pictures/logo.png" // 3. Dein Logo
               alt="FPV-Flow Logo"
               style={{ 
                 height: '36px', // Etwas größer für Desktop

@@ -7,7 +7,7 @@ import {
   IconButton,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import backgroundImage from '/pictures/DSC04197_croped.jpg';
+import backgroundImage from '/websiteforfpv/pictures/DSC04197_croped.jpg';
 
 
 const videoList = [
