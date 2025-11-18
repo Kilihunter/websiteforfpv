@@ -1,15 +1,51 @@
-import { Box, Typography, Button, rgbToHex } from '@mui/material';
+import React, { useEffect, useRef } from 'react';
+import { Box, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import videoSource from '../videos/ThePfalzv1.mp4';
+
 export default function HeroSection() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const startVideo = () => {
+      // Always start from the beginning
+      video.currentTime = 0;
+
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.then === 'function') {
+        playPromise.catch(() => {
+          // Autoplay blocked -> wait for first user interaction
+          const onFirstInteraction = () => {
+            video.currentTime = 0;
+            video.play().catch(() => {
+              // If it *still* fails, we just give up silently
+            });
+            window.removeEventListener('touchstart', onFirstInteraction);
+            window.removeEventListener('click', onFirstInteraction);
+          };
+
+          window.addEventListener('touchstart', onFirstInteraction, { once: true });
+          window.addEventListener('click', onFirstInteraction, { once: true });
+        });
+      }
+    };
+
+    startVideo();
+  }, []);
+
   return (
-    <Box sx={{ position: 'relative', height: '90vh', overflow: 'hidden'}}>
+    <Box sx={{ position: 'relative', height: '90vh', overflow: 'hidden' }}>
       {/* Hintergrundvideo */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         style={{
           position: 'absolute',
           top: 0,
@@ -38,23 +74,28 @@ export default function HeroSection() {
           textAlign: 'center',
         }}
       >
-        <Box sx={{
-          backgroundColor: 'rgba(49, 48, 48, 0.5)',
-          px: 3,
-          py: 3,
-          borderRadius: 2
-
-
-        }}>
-        <Typography variant="h2" component="h1" gutterBottom>
-          Willkommen!
-        </Typography>
-        <Typography variant="h5" gutterBottom>
-        Entdecke die Freiheit neuer Perspektiven
-        </Typography>
-        <Button component={Link} to="/contact" color='success' sx={{backgroundColor:'transparent'}} >
-          Film Buchen
-        </Button>
+        <Box
+          sx={{
+            backgroundColor: 'rgba(49, 48, 48, 0.5)',
+            px: 3,
+            py: 3,
+            borderRadius: 2,
+          }}
+        >
+          <Typography variant="h2" component="h1" gutterBottom>
+            Willkommen!
+          </Typography>
+          <Typography variant="h5" gutterBottom>
+            Entdecke die Freiheit neuer Perspektiven
+          </Typography>
+          <Button
+            component={Link}
+            to="/contact"
+            color="success"
+            sx={{ backgroundColor: 'transparent' }}
+          >
+            Film Buchen
+          </Button>
         </Box>
       </Box>
     </Box>

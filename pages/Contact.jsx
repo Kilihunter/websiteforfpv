@@ -36,7 +36,7 @@ export default function HeroSection() {
         }}
       >
         <Typography variant="h3" gutterBottom>
-        Kontakt daten
+        Kontaktdaten
         
         </Typography>
         <Typography variant="body1">

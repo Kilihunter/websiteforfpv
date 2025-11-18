@@ -28,7 +28,7 @@ function GalleryPage() {
           sx={{
             color: '#fff',
             backgroundColor: 'rgba(0,0,0,0.5)',
-            borderRadius: 2,
+            borderRadius: 1,
           }}
         >
           About
@@ -53,7 +53,7 @@ function GalleryPage() {
               }}
             >
              <Typography variant="h3" gutterBottom>
-        Hi, ich bin Kilian von FPVision!
+        Hi, ich bin Kilian von FPV-Flow!
         
         </Typography>
         <Typography variant="body1">
