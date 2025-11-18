@@ -54,7 +54,7 @@ function MobileNavbar() {
         onClick={handleMenuClose}
         sx={{ 
           zIndex: 99, 
-          backgroundColor: 'rgba(0,0,0,0.3)'
+          backgroundColor: 'rgba(75, 75, 75, 0.5)'
         }}
       />
 
@@ -109,7 +109,7 @@ function MobileNavbar() {
                 variant="h6"
                 component="div"
                 sx={{
-                  color: 'white',
+                  color: 'text.primary',
                   fontFamily: 'Pacifico, cursive',
                   fontWeight: 400,
                   letterSpacing: 1,
@@ -132,7 +132,7 @@ function MobileNavbar() {
               edge="end"
               onClick={handleMenuToggle}
               sx={{ 
-                color: 'white',
+                color: 'text.primary',
                 transform: isMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                 transition: 'transform 300ms ease',
               }}
@@ -173,7 +173,7 @@ function MobileNavbar() {
                     onClick={handleMenuClose}
                     sx={{
                       textAlign: 'center',
-                      color: 'white',
+                      color: 'text.primary',
                       paddingTop: '8px',
                       paddingBottom: '8px',
                     }}

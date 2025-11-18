@@ -16,15 +16,15 @@ function LegalFooter() {
         fontSize: { xs: 12, sm: 14 },
       }}
     >
-      <Typography variant="body2" sx={{ mb: 1 }}>
+      <Typography variant="body2" sx={{ mb: 1,  color: 'text.primary'}}>
         &copy; {new Date().getFullYear()} FPV-Flow. Alle Rechte vorbehalten.
       </Typography>
       <Typography variant="body2">
-        <Link href="#" underline="hover" color="inherit" sx={{ mx: 1 }}>
+        <Link href="#" underline="hover" color="inherit" sx={{ mx: 1, color: 'text.primary'}}>
           Impressum
         </Link>
         |
-        <Link href="#" underline="hover" color="inherit" sx={{ mx: 1 }}>
+        <Link href="#" underline="hover" color="inherit" sx={{ mx: 1, color: 'text.primary'}}>
           Datenschutz
         </Link>
       </Typography>

@@ -35,7 +35,7 @@ function DesktopNavbar() {
       <AppBar
         position="static"
         sx={{
-          backgroundColor: hovered ? 'rgb(36, 34, 34)' : 'transparent',
+          backgroundColor: hovered ? 'background.default' : 'transparent',
           boxShadow: 'none',
           borderRadius: '15px',
           transition: 'all 0.3s ease-in-out',
@@ -61,7 +61,7 @@ function DesktopNavbar() {
               variant="h6"
               component="div"
               sx={{
-                color: hovered ? 'white' : 'black', // 4. Hover-Effekt
+                color: hovered ? 'text.primary' : 'white', // 4. Hover-Effekt
                 fontFamily: 'Pacifico, cursive', // 5. Deine Schriftart
                 fontWeight: 400,
                 letterSpacing: 1,
@@ -88,7 +88,7 @@ function DesktopNavbar() {
                 variant="text"
                 disableRipple
                 sx={{
-                  color: hovered ? 'white' : 'black',
+                  color: hovered ? 'text.primary' : 'white',
                   backgroundColor: 'transparent',
                   transition: '0.3s ease-in-out',
                 }}

@@ -51,11 +51,11 @@ function GalleryPage() {
         
         </Typography>
         <Typography variant="body1">
-        "Seit mehreren Monaten bin ich mit voller Begeisterung in der Welt der FPV-Drohnen unterwegs. FPV steht für First Person View – das bedeutet, ich fliege meine Drohnen mit einer speziellen Videobrille und sehe dabei in Echtzeit genau das, was die Drohne sieht. So wird jeder Flug zu einem immersiven Erlebnis – und das sieht man auch in meinen Aufnahmen.
+        Seit mehreren Monaten bin ich mit voller Begeisterung in der Welt der FPV-Drohnen unterwegs. FPV steht für First Person View – das bedeutet, ich fliege meine Drohnen mit einer speziellen Videobrille und sehe dabei in Echtzeit genau das, was die Drohne sieht. So wird jeder Flug zu einem immersiven Erlebnis – und das sieht man auch in meinen Aufnahmen.
 
 Durch diese Technik kann ich extrem präzise manövrieren – durch enge Räume, unter Hindernissen hindurch oder mitten durch spannende Locations. Im Gegensatz zu klassischen Kameradrohnen sind meine FPV-Drohnen auf Geschwindigkeit, Agilität und kreative Freiheit ausgelegt.
 
-Ob für actionreiche Werbevideos, besondere Eventaufnahmen oder spektakuläre Luftbilder für Social Media – ich zeige Perspektiven, die im Kopf bleiben. Mein Ziel: Aufnahmen, die Emotionen wecken und in Erinnerung bleiben."
+Ob für actionreiche Werbevideos, besondere Eventaufnahmen oder spektakuläre Luftbilder für Social Media – ich zeige Perspektiven, die im Kopf bleiben. Mein Ziel: Aufnahmen, die Emotionen wecken und in Erinnerung bleiben.
         </Typography>
             </Box>
           </Grid>
