@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Box, Toolbar, Typography, Button } from '@mui/material';
+import logo from '/pictures/logo.png';
 
 // 1. Google Font importieren
 import "@fontsource/pacifico";
@@ -47,7 +48,7 @@ function DesktopNavbar() {
           {/* 2. Box für Logo + Titel */}
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, overflow: 'visible' }}>
             <img
-              src="/websiteforfpv/pictures/logo.png" // 3. Dein Logo
+              src={logo} // 3. Dein Logo
               alt="FPV-Flow Logo"
               style={{ 
                 height: '36px', // Etwas größer für Desktop

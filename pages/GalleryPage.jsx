@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { Helmet } from 'react-helmet-async';
-import backgroundImage from '/websiteforfpv/pictures/DSC04197_croped.jpg';
+import backgroundImage from '../pictures/DSC04197_croped.jpg'; // Assuming 'pictures' is a folder next to 'pages'
 
 // Define the ID for your YouTube video
 const YOUTUBE_VIDEO_ID = "MXwbyfbNjpU";

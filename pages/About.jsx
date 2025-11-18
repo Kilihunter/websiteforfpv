@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import backgroundImage from '/pictures/DSC04197_croped.jpg';
+import myImage from '/pictures/DSC04175.jpg';
 
 function GalleryPage() {
   return (
@@ -85,7 +86,7 @@ Ob für actionreiche Werbevideos, besondere Eventaufnahmen oder spektakuläre Lu
                 Wer steckt dahinter?
               </Typography>
               <Typography variant="body1">
-                Ich bin Kilian, der Kopf, Pilot und kreative Motor hinter FPVision. Im Bild siehst du mich gerade bei der Vorbereitung einer meiner speziell angefertigten FPV-Drohnen.
+                Ich bin Kilian, der Kopf, Pilot und kreative Motor hinter FPV-Flow. Im Bild siehst du mich gerade bei der Vorbereitung einer meiner speziell angefertigten FPV-Drohnen.
 
 Als dein direkter Ansprechpartner – vom ersten Konzept bis zur finalen Aufnahme – verbinde ich technisches Flugkönnen mit einem filmischen Auge. Mein Anspruch ist es, deine Vision ohne Umwege in packende Bilder zu verwandeln.
               </Typography>
@@ -105,7 +106,7 @@ Als dein direkter Ansprechpartner – vom ersten Konzept bis zur finalen Aufnahm
             >
               <Box
                 component="img"
-                src="/websiteforfpv/pictures/DSC04175.jpg"
+                src={myImage}
                 alt="Bild 2"
                 sx={{
                   width: '100%',

@@ -1,5 +1,6 @@
 import { Box, Typography, Button, rgbToHex } from '@mui/material';
 import { Link } from 'react-router-dom';
+import videoSource from '../videos/ThePfalzv1.mp4';
 export default function HeroSection() {
   return (
     <Box sx={{ position: 'relative', height: '90vh', overflow: 'hidden'}}>
@@ -19,7 +20,7 @@ export default function HeroSection() {
           zIndex: 1,
         }}
       >
-        <source src="/websiteforfpv/videos/ThePfalzv1.mp4" type="video/mp4" />
+        <source src={videoSource} type="video/mp4" />
         Dein Browser unterstützt kein Video.
       </video>
 
