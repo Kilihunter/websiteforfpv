@@ -1,13 +1,18 @@
+import { lazy, Suspense } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
+// Keep Navbar/Footer eager as they are always visible
 import Navbar from './modules/navbar';
-import GalleryPage from './pages/GalleryPage';
-import Contact from './pages/Contact'
 import LegalFooter from './modules/legalfooter';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useMemo } from 'react';
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const GalleryPage = lazy(() => import('./pages/GalleryPage'));
+const Contact = lazy(() => import('./pages/Contact'));
 
 
 function App() {

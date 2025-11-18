@@ -1,10 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import backgroundImage from '/pictures/DSC04197_croped.jpg';
 
 function GalleryPage() {
   return (
     <>
+    <Helmet>
+        <title>Home | My FPV Journey</title>
+        <meta name="description" content="Cinematic FPV drone footage and photography portfolio." />
+      </Helmet>
       {/* Header-Bild */}
       <Box
         sx={{

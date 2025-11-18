@@ -1,8 +1,14 @@
 import { Box, Typography } from '@mui/material';
+import { Helmet } from 'react-helmet-async';
 import backgroundImage from '/pictures/DSC04197_littlecropped.jpg'; // dein Bild hier
 
 export default function HeroSection() {
   return (
+    <>
+    <Helmet>
+        <title>Home | My FPV Journey</title>
+        <meta name="description" content="Cinematic FPV drone footage and photography portfolio." />
+      </Helmet>
     <Box
       sx={{
         position: 'relative',
@@ -41,5 +47,6 @@ export default function HeroSection() {
         </Typography>
       </Box>
     </Box>
+    </>
   );
 }
