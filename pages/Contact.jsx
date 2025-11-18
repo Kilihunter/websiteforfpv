@@ -43,7 +43,7 @@ export default function HeroSection() {
        E-Mail: its.kili.fpv@gmail.com
         </Typography>
         <Typography variant="body1">
-          Instergram: its_kili_fpv
+          Instagram: its_kili_fpv
         </Typography>
       </Box>
     </Box>
