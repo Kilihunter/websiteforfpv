@@ -57,7 +57,7 @@ const LandingInfoSection = () => {
           </Typography>
 
           <Typography variant="body1" sx={{ maxWidth: '700px' }}>
-            Wir bei FPVision fangen Momente ein, die anderen verborgen bleiben –
+            Wir bei Sturm FPV fangen Momente ein, die anderen verborgen bleiben –
             mit innovativer Drohnentechnologie und einem kreativen Auge für das
             Außergewöhnliche.
           </Typography>
