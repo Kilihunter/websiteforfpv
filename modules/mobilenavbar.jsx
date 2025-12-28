@@ -15,11 +15,12 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import logo from '/pictures/logo.png';
+import SturmLogo from './logo';
 
 
 // 1. Google Font importieren
-import "@fontsource/pacifico";
+import '@fontsource/oswald/400.css';
+import '@fontsource/oswald/600.css';
 
 const navItems = [
   { label: 'Home', path: '/' },
@@ -95,25 +96,17 @@ function MobileNavbar() {
           <Toolbar>
             {/* Wrapper für Logo + Text, verhindert Überlaufen */}
             <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, overflow: 'visible' }}>
-              <img
-                src={logo}
-                alt="FPV-Flow Logo"
-                style={{ 
-                  height: '30px', 
-                  width: '30px', // Stellt sicher, dass es quadratisch ist
-                  objectFit: 'contain', 
-                  cursor: 'pointer', 
-                  marginRight: '10px' 
-                }}
-              />
+              <div style={{ color: '66BB6A', display: 'flex', alignItems: 'center' }}>
+                <SturmLogo size={36} color="#66BB6A" />
+            </div>
               {/* Hier ist die geänderte Typography */}
               <Typography
                 variant="h6"
                 component="div"
                 sx={{
                   color: 'text.primary',
-                  fontFamily: 'Pacifico, cursive',
-                  fontWeight: 400,
+                  fontFamily: '"Oswald", sans-serif',
+                  fontWeight: 600,
                   letterSpacing: 1,
                   userSelect: 'none',
                   fontSize: '1.3rem',
@@ -124,7 +117,7 @@ function MobileNavbar() {
                   overflow: 'visible', // Verhindert Abschneiden
                 }}
               >
-                FPV-Flow by Sturm
+                Sturm FPV
               </Typography>
             </Box>
 

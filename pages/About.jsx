@@ -28,7 +28,7 @@ function GalleryPage() {
           sx={{
             color: '#fff',
             backgroundColor: 'rgba(0,0,0,0.5)',
-            borderRadius: 1,
+            borderRadius: 2,
           }}
         >
           About
@@ -53,7 +53,7 @@ function GalleryPage() {
               }}
             >
              <Typography variant="h3" gutterBottom>
-        Hi, ich bin Kilian von FPV-Flow!
+        Hi, ich bin Kilian von Sturm FPV!
         
         </Typography>
         <Typography variant="body1">
@@ -86,7 +86,7 @@ Ob für actionreiche Werbevideos, besondere Eventaufnahmen oder spektakuläre Lu
                 Wer steckt dahinter?
               </Typography>
               <Typography variant="body1">
-                Ich bin Kilian, der Kopf, Pilot und kreative Motor hinter FPV-Flow. Im Bild siehst du mich gerade bei der Vorbereitung einer meiner speziell angefertigten FPV-Drohnen.
+                Ich bin Kilian, der Kopf, Pilot und kreative Motor hinter Sturm FPV. Im Bild siehst du mich gerade bei der Vorbereitung einer meiner speziell angefertigten FPV-Drohnen.
 
 Als dein direkter Ansprechpartner – vom ersten Konzept bis zur finalen Aufnahme – verbinde ich technisches Flugkönnen mit einem filmischen Auge. Mein Anspruch ist es, deine Vision ohne Umwege in packende Bilder zu verwandeln.
               </Typography>

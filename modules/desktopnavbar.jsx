@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Box, Toolbar, Typography, Button } from '@mui/material';
-import logo from '/pictures/logo.png';
+import SturmLogo from './logo'; // Angenommen, du hast ein separates Logo-Komponentenmodul
 
 // 1. Google Font importieren
-import "@fontsource/pacifico";
+import '@fontsource/oswald/400.css';
+import '@fontsource/oswald/600.css';
+
 
 // Die Navigations-Links (bleiben gleich)
 const navItems = [
@@ -47,24 +49,17 @@ function DesktopNavbar() {
           {/* --- ANPASSUNG START --- */}
           {/* 2. Box für Logo + Titel */}
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, overflow: 'visible' }}>
-            <img
-              src={logo} // 3. Dein Logo
-              alt="FPV-Flow Logo"
-              style={{ 
-                height: '36px', // Etwas größer für Desktop
-                width: '36px',  // Quadratisch machen
-                objectFit: 'contain', 
-                cursor: 'pointer', 
-                marginRight: '12px' 
-              }}
-            />
+         <div style={{ color: "#0B1220", display: "flex", alignItems: "center" }}>
+           <SturmLogo size={40} color="#66BB6A" />
+          </div>
+
             <Typography
               variant="h6"
               component="div"
               sx={{
                 color: hovered ? 'text.primary' : 'white', // 4. Hover-Effekt
-                fontFamily: 'Pacifico, cursive', // 5. Deine Schriftart
-                fontWeight: 400,
+                fontFamily: '"Oswald", sans-serif', // 5. Deine Schriftart
+                fontWeight: 600,
                 letterSpacing: 1,
                 transition: '0.3s ease-in-out',
                 userSelect: 'none',
@@ -74,7 +69,7 @@ function DesktopNavbar() {
                 overflow: 'visible',
               }}
             >
-              FPV-Flow by Sturm {/* 7. Dein Name */}
+              Sturm FPV {/* 7. Dein Name */}
             </Typography>
           </Box>
           {/* --- ANPASSUNG ENDE --- */}
