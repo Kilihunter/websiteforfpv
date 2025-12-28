@@ -208,17 +208,7 @@ function GalleryDesktop({ backgroundImage, videoList, handleOpen, open, handleCl
       </Box>
 
       {/* Desktop Modal */}
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        fullWidth
-        maxWidth="lg"
-        PaperProps={{ sx: { backgroundColor: "black" } }}
-      >
-        <DialogContent sx={{ position: "relative", p: 0 }}>
-          <VideoModalContent video={selectedVideo} handleClose={handleClose} />
-        </DialogContent>
-      </Dialog>
+      
     </>
   );
 }
@@ -356,17 +346,8 @@ function GalleryMobile({ backgroundImage, videoList, handleOpen, open, handleClo
         </Box>
       </Box>
 
-      {/* Mobile Modal: fullscreen */}
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        fullScreen
-        PaperProps={{ sx: { backgroundColor: "black" } }}
-      >
-        <DialogContent sx={{ position: "relative", p: 0 }}>
-          <VideoModalContent video={selectedVideo} handleClose={handleClose} />
-        </DialogContent>
-      </Dialog>
+     
+      
     </>
   );
 }
@@ -419,7 +400,6 @@ export default function GalleryPage() {
       <Dialog
         open={open}
         onClose={handleClose}
-        fullScreen={isMobile}
         fullWidth
         maxWidth={isMobile ? false : "lg"}
         PaperProps={{ sx: { backgroundColor: "black" } }}
