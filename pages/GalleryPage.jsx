@@ -17,7 +17,7 @@ const videoList = [
     title: 'Cinematic Selection', 
     type: 'youtube' // New type identifier
   },
-  { src: "2YbJ7_XUngc", title: 'Sunrise in Leistadt', type: 'youtube' },
+  { src: "gZpaMKuEtWE", title: 'Sunrise in Leistadt', type: 'youtube' },
 ];
 // -----------------------------------------
 
