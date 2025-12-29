@@ -232,14 +232,14 @@ function GalleryMobile({ backgroundImage, videoList, handleOpen, open, handleClo
       {/* Header kleiner */}
       <Box
               sx={{
-                  minHeight: { xs: "21svh", md: "34svh" },
+                  minHeight: { xs: "26svh", md: "34svh" },
                   backgroundImage: `url(${backgroundImage})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   display: "flex",
                   alignItems: "flex-end",
                   justifyContent: "center",
-                  pb:{ xs: 3.5, md: 5 },
+                  pb:{xs: 3.5, md: 5 },
                   position: "relative",
               }}
             >

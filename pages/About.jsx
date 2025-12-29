@@ -144,7 +144,7 @@ function AboutMobile() {
       {/* Header */}
       <Box
         sx={{
-          minHeight: { xs: "21svh", md: "34svh" },
+          minHeight: { xs: "26svh", md: "34svh" },
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
