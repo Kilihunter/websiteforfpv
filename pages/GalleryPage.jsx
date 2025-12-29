@@ -8,15 +8,16 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 
 
-const YOUTUBE_VIDEO_ID = "MXwbyfbNjpU";
+
 
 // --- MODIFIED: Added the YouTube entry ---
 const videoList = [
   { 
-    src: YOUTUBE_VIDEO_ID, 
+    src: "MXwbyfbNjpU", 
     title: 'Cinematic Selection', 
     type: 'youtube' // New type identifier
   },
+  { src: "2YbJ7_XUngc", title: 'Sunrise in Leistadt', type: 'youtube' },
 ];
 // -----------------------------------------
 
