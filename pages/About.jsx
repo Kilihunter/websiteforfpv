@@ -19,16 +19,29 @@ function AboutDesktop() {
           justifyContent: 'center',
         }}
       >
+        <Box
+          sx={{
+            position: "relative",
+            px: { xs: 2.5, md: 4 },
+            py: { xs: 1.2, md: 1.8 },
+            borderRadius: 3,
+            bgcolor: "rgba(0,0,0,0.45)",
+            backdropFilter: "blur(6px)",
+          }}
+        >
         <Typography
           variant="h2"
           sx={{
-            color: '#fff',
-            backgroundColor: 'rgba(0,0,0,0.5)',
-            borderRadius: 2,
+            color: "#fff",
+              fontWeight: 900,
+              letterSpacing: 2,
+              fontSize: { xs: "2.2rem", md: "3.2rem" },
+              lineHeight: 1,
           }}
         >
           About
         </Typography>
+        </Box>
       </Box>
 
       {/* Neuer Inhalt, zentriert */}
@@ -131,20 +144,15 @@ function AboutMobile() {
       {/* Header */}
       <Box
         sx={{
-          height: { xs: "26vh", md: "34vh" },
+          minHeight: { xs: "21svh", md: "34svh" },
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-end",
           justifyContent: "center",
+          pb: { xs: 3.5, md: 5},
           position: "relative",
-          "&:before": {
-            content: '""',
-            position: "absolute",
-            inset: 0,
-            background: "linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.65))",
-          },
         }}
       >
         <Box

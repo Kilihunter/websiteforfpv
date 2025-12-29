@@ -23,23 +23,34 @@ export default function HeroSection() {
       }}
     >
       {/* Overlay-Box mit Text */}
-      <Box
-        sx={{
+      <Box sx={{
           position: 'absolute',
           transform: 'translateY(-50%)',
           backgroundColor: 'rgba(0, 0, 0, 0.7)', // schwarz mit Transparenz
           color: 'white',
           padding: 4,
           boxShadow: 3,
-          borderRadius: 2,
+          borderRadius: 3,
+          bgcolor: "rgba(0,0,0,0.45)",
+          backdropFilter: "blur(6px)",
           maxWidth: { xs: '90%', md: '40%' },
         }}
-      >
-        <Typography variant="h3" gutterBottom>
-        Kontaktdaten
-        
+>
+              <Typography
+                variant="h2"
+                gutterBottom
+                sx={{
+                  color: "#fff",
+                  fontWeight: 900,
+                  letterSpacing: 2,
+                  
+                  fontSize: { xs: "2.2rem", md: "3.2rem" },
+                  lineHeight: 1,
+                }}>
+        Contact
         </Typography>
-        <Typography variant="body1">
+
+        <Typography variant="body1" sx={{ lineHeight: 1, }}>
        E-Mail: its.kili.fpv@gmail.com
         </Typography>
         <Typography variant="body1">

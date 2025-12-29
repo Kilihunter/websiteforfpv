@@ -77,12 +77,19 @@ export default function HeroSection() {
         <Box
           sx={{
             backgroundColor: 'rgba(49, 48, 48, 0.5)',
+            backdropFilter: "blur(6px)",
             px: 3,
             py: 3,
             borderRadius: 2,
+            mx: { xs: 2, sm: 3 },
           }}
         >
-          <Typography variant="h2" component="h1" gutterBottom>
+          <Typography variant="h2" gutterBottom sx={{
+             color: "#fff",
+              fontWeight: 600,
+              letterSpacing: 2,
+              fontSize: { xs: "2.2rem", md: "3.2rem" },
+              lineHeight: 1,}}>
             Willkommen!
           </Typography>
           <Typography variant="h5" gutterBottom>
